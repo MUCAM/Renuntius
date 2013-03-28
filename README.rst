@@ -100,6 +100,7 @@ Sending an E-Mail via ``renuntius``:
     POST http://localhost:5001/api/messages/
 
 .. code-block:: json
+
     {"header_from":     "other_service@domain.org",
      "header_to":       "admins@domain.org",
      "header_subject":  "Sent by Renuntius",
