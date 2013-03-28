@@ -45,7 +45,7 @@ In order to run the application, write the following python-code (e.g.:
 
     # Database
     SQLALCHEMY_DATABASE_URI = 'sqlite:////tmp/renuntius.sqlite'
-    SQLALCHEMY_ECHO = True
+    SQLALCHEMY_ECHO = False
 
     # E-Mail-Server
     SMTP_SERVER = 'MAILSERVER.DOMAIN.ORG'
@@ -118,7 +118,7 @@ Getting a list of all messages::
 
 Querying for specific messages::
 
-    GET http://localhost:5001/api/messages/?q={"filters":[{"name": "header_from", "op": "==", "val":"other_service@domain.org"}]}
+    GET http://localhost:5001/api/messages?q={"filters":[{"name": "header_from", "op": "==", "val":"other_service@domain.org"}]}
 
 For a detailed specification of how to use filters, please look at
 `flask-restless <https://flask-restless.readthedocs.org/en/latest/searchformat.html>`_
