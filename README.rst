@@ -26,7 +26,9 @@ Local application
 -----------------
 
 In order to run the application, write the following python-code (e.g.:
-``start_renuntius.py``)::
+``start_renuntius.py``):
+
+.. code-block:: python
 
     from renuntius.messaging import flask, db, app, Message
 
@@ -37,7 +39,9 @@ In order to run the application, write the following python-code (e.g.:
 
     app.run(host=localhost, port=5001)
 
-**Note**: Within the application folder you need a ``config.py``, like::
+**Note**: Within the application folder you need a ``config.py``, like:
+
+.. code-block:: python
 
     # Database
     SQLALCHEMY_DATABASE_URI = 'sqlite:////tmp/renuntius.sqlite'
@@ -69,7 +73,9 @@ following::
   pip install psycopg2
 
 Example ``config.py`` for postgresql (you probably want to specify the
-``SCHEMA``!)::
+``SCHEMA``!):
+
+.. code-block:: python
 
     # Database
     SQLALCHEMY_DATABASE_URI = 'postgresql://_ren_admin@ama-prod/mucam'
@@ -87,10 +93,13 @@ Example ``config.py`` for postgresql (you probably want to specify the
 Quickstart
 ==========
 
-Sending an E-Mail via ``renuntius``::
+Sending an E-Mail via ``renuntius``:
+
+.. code-block:: html
 
     POST http://localhost:5001/api/messages/
 
+.. code-block:: json
     {"header_from":     "other_service@domain.org",
      "header_to":       "admins@domain.org",
      "header_subject":  "Sent by Renuntius",
